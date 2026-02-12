@@ -15,15 +15,26 @@ namespace StarBuko
         public UserProfileControl()
         {
             InitializeComponent();
+            this.Cursor = Cursors.Hand;
+            this.Cursor = Cursors.Default;
+
         }
 
 
 
+        public event EventHandler ProductClicked;
 
+        private void TriggerClick(object sender, EventArgs e)
+        {
+            ProductClicked?.Invoke(this, EventArgs.Empty);
+        }
 
         private void UserProfileControl_Load(object sender, EventArgs e)
         {
-
+            this.Click += TriggerClick;
+            itemName.Click += TriggerClick;
+            priceValue.Click += TriggerClick;
+            prodPicture.Click += TriggerClick;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,8 +59,8 @@ namespace StarBuko
 
         }
 
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Image PictureBoxImage
         {
             get => prodPicture.Image;
@@ -57,7 +68,6 @@ namespace StarBuko
         }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-
         public string Title
         {
             get => itemName.Text;
@@ -65,12 +75,12 @@ namespace StarBuko
         }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
-
         public string LabelPrice
         {
             get => priceValue.Text;
             set => priceValue.Text = value;
         }
+
     }
 
 }
