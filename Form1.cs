@@ -21,7 +21,6 @@ namespace StarBuko
 
             dataGridTable.DataSource = cart;
 
-            // Make columns fill the grid width
             dataGridTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dataGridTable.Columns.Add(new DataGridViewTextBoxColumn()
@@ -54,7 +53,6 @@ namespace StarBuko
         {
             products = ProductsList.GetProducts();
 
-            // Assign products to UserControls manually
             chocoChip.Title = products[0].prodName;
             chocoChip.LabelPrice = products[0].itemPrice.ToString("0.00");
 
@@ -79,7 +77,6 @@ namespace StarBuko
             XOXOFrap.Title = products[7].prodName;
             XOXOFrap.LabelPrice = products[7].itemPrice.ToString("0.00");
 
-            // Subscribe to click events
             chocoChip.ProductClicked += AddToCart;
             DarkCaraFrap.ProductClicked += AddToCart;
             DragDrink.ProductClicked += AddToCart;
@@ -206,10 +203,8 @@ namespace StarBuko
             decimal total = 0;
             decimal tender = 0;
 
-            // Get total amount from amountPrice label
             decimal.TryParse(amountPrice.Text, out total);
 
-            // Get tendered money from textbox
             if (decimal.TryParse(tenderedMoney.Text, out tender))
             {
                 decimal change = tender - total;
@@ -217,7 +212,7 @@ namespace StarBuko
                 if (change >= 0)
                     changePrice.Text = change.ToString("0.00");
                 else
-                    changePrice.Text = "0.00";
+                    changePrice.Text = change.ToString("0.00");
             }
             else
             {
@@ -248,10 +243,8 @@ namespace StarBuko
 
         private void transactionButton_Click(object sender, EventArgs e)
         {
-            // Clear the cart
             cart.Clear();
 
-            // Reset totals
             amountPrice.Text = "0.00";
             tenderedMoney.Text = "";
             changePrice.Text = "0.00";

@@ -84,7 +84,7 @@
             dataGridTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridTable.Location = new Point(821, 72);
             dataGridTable.Name = "dataGridTable";
-            dataGridTable.Size = new Size(641, 399);
+            dataGridTable.Size = new Size(641, 407);
             dataGridTable.TabIndex = 2;
             dataGridTable.CellContentClick += dataGridTable_CellContentClick;
             // 
@@ -196,7 +196,7 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(892, 479);
+            label2.Location = new Point(892, 487);
             label2.Name = "label2";
             label2.Size = new Size(138, 30);
             label2.TabIndex = 11;
@@ -208,7 +208,7 @@
             amountPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             amountPrice.AutoSize = true;
             amountPrice.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            amountPrice.Location = new Point(1374, 479);
+            amountPrice.Location = new Point(1374, 487);
             amountPrice.Name = "amountPrice";
             amountPrice.Size = new Size(55, 30);
             amountPrice.TabIndex = 12;
@@ -220,7 +220,7 @@
             label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(851, 525);
+            label3.Location = new Point(851, 533);
             label3.Name = "label3";
             label3.Size = new Size(179, 30);
             label3.TabIndex = 13;
@@ -230,7 +230,7 @@
             // tenderedMoney
             // 
             tenderedMoney.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            tenderedMoney.Location = new Point(1289, 534);
+            tenderedMoney.Location = new Point(1289, 542);
             tenderedMoney.Name = "tenderedMoney";
             tenderedMoney.Size = new Size(173, 23);
             tenderedMoney.TabIndex = 14;
@@ -242,7 +242,7 @@
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(946, 578);
+            label1.Location = new Point(946, 586);
             label1.Name = "label1";
             label1.Size = new Size(84, 30);
             label1.TabIndex = 15;
@@ -254,7 +254,7 @@
             changePrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             changePrice.AutoSize = true;
             changePrice.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            changePrice.Location = new Point(1374, 578);
+            changePrice.Location = new Point(1374, 586);
             changePrice.Name = "changePrice";
             changePrice.Size = new Size(55, 30);
             changePrice.TabIndex = 16;
@@ -266,7 +266,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1474, 653);
+            ClientSize = new Size(1474, 661);
             Controls.Add(changePrice);
             Controls.Add(label1);
             Controls.Add(tenderedMoney);
