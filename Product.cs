@@ -1,21 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StarBuko
+﻿namespace StarBuko
 {
-    internal class Product
+    public class Product
     {
+        public int ProductId { get; set; }
         public string prodName { get; set; }
         public int ItemQuantity { get; set; }
         public decimal itemPrice { get; set; }
-        public decimal totalPrice 
-        { 
-            get { return ItemQuantity * itemPrice; }
-        }
-
-        
+        public decimal totalPrice => ItemQuantity * itemPrice;
     }
 }
