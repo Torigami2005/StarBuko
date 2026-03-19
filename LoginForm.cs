@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace StarBuko
 {
@@ -60,6 +61,16 @@ namespace StarBuko
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
             btnLogin.Click += btnLogin_Click;
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.MinimumSize = new Size(400, 350);
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

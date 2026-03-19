@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj": {}
+    "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj": {
+    "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj",
+        "projectUniqueName": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj",
         "projectName": "StarBuko",
-        "projectPath": "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj",
-        "packagesPath": "C:\\Users\\emant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emant\\source\\repos\\StarBuko\\obj\\",
+        "projectPath": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj",
+        "packagesPath": "C:\\Users\\etgberjame\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\emant\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\etgberjame\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

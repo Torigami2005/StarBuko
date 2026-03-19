@@ -19,7 +19,7 @@ namespace StarBuko
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {
-
+            this.MinimumSize = new Size(400, 350);
         }
 
         private void label1_Click(object sender, EventArgs e)

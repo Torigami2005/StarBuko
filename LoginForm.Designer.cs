@@ -38,71 +38,75 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(3, 53, 44);
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Snow;
-            label1.Location = new Point(151, 32);
+            label1.Location = new Point(132, 24);
             label1.Name = "label1";
-            label1.Size = new Size(218, 38);
+            label1.Size = new Size(169, 30);
             label1.TabIndex = 0;
             label1.Text = "StarBuko Login";
             label1.Click += label1_Click;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(3, 53, 44);
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Snow;
-            label2.Location = new Point(107, 109);
+            label2.Location = new Point(94, 82);
             label2.Name = "label2";
-            label2.Size = new Size(106, 28);
+            label2.Size = new Size(87, 21);
             label2.TabIndex = 1;
             label2.Text = "Username";
             label2.Click += label2_Click;
             // 
             // txtUsername
             // 
-            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtUsername.Location = new Point(107, 152);
+            txtUsername.Anchor = AnchorStyles.Top;
+            txtUsername.Location = new Point(94, 114);
+            txtUsername.Margin = new Padding(3, 2, 3, 2);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(308, 27);
+            txtUsername.Size = new Size(270, 23);
             txtUsername.TabIndex = 2;
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(3, 53, 44);
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Snow;
-            label3.Location = new Point(107, 213);
+            label3.Location = new Point(94, 160);
             label3.Name = "label3";
-            label3.Size = new Size(101, 28);
+            label3.Size = new Size(82, 21);
             label3.TabIndex = 3;
             label3.Text = "Password";
             label3.Click += label3_Click;
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtPassword.Location = new Point(107, 244);
+            txtPassword.Anchor = AnchorStyles.Top;
+            txtPassword.Location = new Point(94, 183);
+            txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(308, 27);
+            txtPassword.Size = new Size(270, 23);
             txtPassword.TabIndex = 4;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // btnLogin
             // 
-            btnLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btnLogin.Anchor = AnchorStyles.Top;
             btnLogin.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(202, 311);
+            btnLogin.Location = new Point(177, 233);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(104, 39);
+            btnLogin.Size = new Size(91, 29);
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
@@ -110,18 +114,21 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 53, 44);
-            ClientSize = new Size(533, 483);
+            ClientSize = new Size(466, 362);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(label3);
             Controls.Add(txtUsername);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "LoginForm";
             Text = "LoginForm";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

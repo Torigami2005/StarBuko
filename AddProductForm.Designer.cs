@@ -38,25 +38,26 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(3, 53, 44);
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Snow;
-            label1.Location = new Point(191, 48);
+            label1.Location = new Point(167, 36);
             label1.Name = "label1";
-            label1.Size = new Size(182, 38);
+            label1.Size = new Size(145, 30);
             label1.TabIndex = 1;
             label1.Text = "Add Product";
             label1.Click += label1_Click;
             // 
             // btnSave
             // 
-            btnSave.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btnSave.Anchor = AnchorStyles.Top;
             btnSave.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(228, 334);
+            btnSave.Location = new Point(200, 250);
+            btnSave.Margin = new Padding(3, 2, 3, 2);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(104, 39);
+            btnSave.Size = new Size(91, 29);
             btnSave.TabIndex = 10;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
@@ -64,60 +65,64 @@
             // 
             // txtPrice
             // 
-            txtPrice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtPrice.Location = new Point(133, 267);
+            txtPrice.Anchor = AnchorStyles.Top;
+            txtPrice.Location = new Point(116, 200);
+            txtPrice.Margin = new Padding(3, 2, 3, 2);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(308, 27);
+            txtPrice.Size = new Size(270, 23);
             txtPrice.TabIndex = 9;
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.BackColor = Color.FromArgb(3, 53, 44);
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Snow;
-            label3.Location = new Point(133, 236);
+            label3.Location = new Point(116, 177);
             label3.Name = "label3";
-            label3.Size = new Size(59, 28);
+            label3.Size = new Size(48, 21);
             label3.TabIndex = 8;
             label3.Text = "Price";
             // 
             // txtProductName
             // 
-            txtProductName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            txtProductName.Location = new Point(133, 175);
+            txtProductName.Anchor = AnchorStyles.Top;
+            txtProductName.Location = new Point(116, 131);
+            txtProductName.Margin = new Padding(3, 2, 3, 2);
             txtProductName.Name = "txtProductName";
-            txtProductName.Size = new Size(308, 27);
+            txtProductName.Size = new Size(270, 23);
             txtProductName.TabIndex = 7;
             txtProductName.TextChanged += txtProductName_TextChanged;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(3, 53, 44);
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Snow;
-            label2.Location = new Point(133, 132);
+            label2.Location = new Point(116, 99);
             label2.Name = "label2";
-            label2.Size = new Size(148, 28);
+            label2.Size = new Size(120, 21);
             label2.TabIndex = 6;
             label2.Text = "Product Name";
             label2.Click += label2_Click;
             // 
             // AddProductForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 53, 44);
-            ClientSize = new Size(574, 504);
+            ClientSize = new Size(502, 378);
             Controls.Add(btnSave);
             Controls.Add(txtPrice);
             Controls.Add(label3);
             Controls.Add(txtProductName);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "AddProductForm";
             Text = "AddProductForm";
             Load += AddProductForm_Load;
