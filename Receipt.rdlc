@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+	<DataSources>
+		<DataSource Name="TransactionItems">
+			<DataSourceReference>TransactionItems</DataSourceReference>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="ItemsDataSet">
+			<Fields>
+				<Field Name="ProdName">
+					<DataField>ProdName</DataField>
+				</Field>
+				<Field Name="ItemPrice">
+					<DataField>ItemPrice</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+				<Field Name="SubTotal">
+					<DataField>SubTotal</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<DataSourceName>TransactionItems</DataSourceName>
+				<CommandText></CommandText>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<ReportParameters>
+		<ReportParameter Name="TransactionId">
+			<DataType>Integer</DataType>
+			<DefaultValue>
+				<Values>
+					<Value>0</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Transaction ID</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="CashierName">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value></Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Cashier Name</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="TransactionDate">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value></Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Transaction Date</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="TotalAmount">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value>0</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Total Amount</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="Tendered">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value>0</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Tendered</Prompt>
+		</ReportParameter>
+		<ReportParameter Name="ChangeAmount">
+			<DataType>String</DataType>
+			<DefaultValue>
+				<Values>
+					<Value>0</Value>
+				</Values>
+			</DefaultValue>
+			<Prompt>Change Amount</Prompt>
+		</ReportParameter>
+	</ReportParameters>
+	<Body>
+		<ReportItems>
+			<Textbox Name="txtTitle">
+				<Value>StarBuko</Value>
+				<Style>
+					<FontSize>18pt</FontSize>
+					<FontWeight>Bold</FontWeight>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>0.1in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.4in</Height>
+			</Textbox>
+			<Textbox Name="txtSubTitle">
+				<Value>Official Receipt</Value>
+				<Style>
+					<FontSize>12pt</FontSize>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>0.5in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.3in</Height>
+			</Textbox>
+			<Textbox Name="txtTransactionId">
+				<Value>=Parameters!TransactionId.Value</Value>
+				<Style>
+					<FontSize>9pt</FontSize>
+				</Style>
+				<Top>0.9in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.25in</Height>
+			</Textbox>
+			<Textbox Name="txtDate">
+				<Value>=Parameters!TransactionDate.Value</Value>
+				<Style>
+					<FontSize>9pt</FontSize>
+				</Style>
+				<Top>1.15in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.25in</Height>
+			</Textbox>
+			<Textbox Name="txtCashier">
+				<Value>=Parameters!CashierName.Value</Value>
+				<Style>
+					<FontSize>9pt</FontSize>
+				</Style>
+				<Top>1.4in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.25in</Height>
+			</Textbox>
+			<Table Name="ItemsTable">
+				<Top>1.8in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<DataSetName>ItemsDataSet</DataSetName>
+				<TableColumns>
+					<TableColumn>
+						<Width>1.5in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.7in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.6in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>0.7in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hItem">
+											<Value>Item</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hPrice">
+											<Value>Price</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hQty">
+											<Value>Qty</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hSub">
+											<Value>Sub</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dItem">
+											<Value>=Fields!ProdName.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dPrice">
+											<Value>=Fields!ItemPrice.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dQty">
+											<Value>=Fields!Quantity.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dSub">
+											<Value>=Fields!SubTotal.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+			</Table>
+			<Textbox Name="txtTotal">
+				<Value>=Parameters!TotalAmount.Value</Value>
+				<Style>
+					<FontSize>
+						11pt<FontWeight>Bold</FontWeight>
+						</FontSize>
+				</Style>
+				<Top>5in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.3in</Height>
+			</Textbox>
+			<Textbox Name="txtTendered">
+				<Value>=Parameters!Tendered.Value</Value>
+				<Style>
+					<FontSize>9pt</FontSize>
+				</Style>
+				<Top>5.35in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.25in</Height>
+			</Textbox>
+			<Textbox Name="txtChange">
+				<Value>=Parameters!ChangeAmount.Value</Value>
+				<Style>
+					<FontSize>9pt</FontSize>
+				</Style>
+				<Top>5.6in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.25in</Height>
+			</Textbox>
+			<Textbox Name="txtThankYou">
+				<Value>Thank you for visiting StarBuko!</Value>
+				<Style>
+					<FontSize>10pt</FontSize>
+					<TextAlign>Center</TextAlign>
+					<FontStyle>Italic</FontStyle>
+				</Style>
+				<Top>6in</Top>
+				<Left>0in</Left>
+				<Width>3.5in</Width>
+				<Height>0.3in</Height>
+			</Textbox>
+		</ReportItems>
+		<Height>6.5in</Height>
+	</Body>
+	<Width>3.5in</Width>
+</Report>

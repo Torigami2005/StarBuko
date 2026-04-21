@@ -1,9 +1,8 @@
-﻿using System.IO.Packaging;
-
-namespace StarBuko
+﻿namespace StarBuko
 {
     public class TransactionRecord
     {
+        public int TransactionId { get; set; }
         public int CashierId { get; set; }
         public decimal TotalAmount { get; set; }
         public decimal Tendered { get; set; }
@@ -18,12 +17,3 @@ namespace StarBuko
         public int Quantity { get; set; }
     }
 }
-//```
-
-//---
-
-//## Step 3 — Datastore
-
-//First, install MySQL connector via NuGet Package Manager Console:
-//```
-//Install - Package MySql.Data

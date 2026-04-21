@@ -1,40 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace StarBuko
 {
     public partial class AddProductForm : Form
     {
+        private string selectedImagePath = "";
+
         public AddProductForm()
         {
             InitializeComponent();
+            pictureBoxProduct.Cursor = Cursors.Hand;
+            pictureBoxProduct.Click += pictureBoxProduct_Click;
         }
 
-        private void AddProductForm_Load(object sender, EventArgs e)
+        private void pictureBoxProduct_Click(object sender, EventArgs e)
         {
-            this.MinimumSize = new Size(400, 350);
-        }
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif";
+            dialog.Title = "Select Product Image";
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtProductName_TextChanged(object sender, EventArgs e)
-        {
-
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                selectedImagePath = dialog.FileName;
+                pictureBoxProduct.Image = Image.FromFile(selectedImagePath);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -46,8 +37,18 @@ namespace StarBuko
                 return;
             }
 
+            string savedImageName = "";
+            if (!string.IsNullOrEmpty(selectedImagePath))
+            {
+                string ext = Path.GetExtension(selectedImagePath);
+                savedImageName = txtProductName.Text.Trim().ToLower().Replace(" ", "_") + ext;
+                string destPath = Path.Combine(Application.StartupPath, "images", savedImageName);
+                Directory.CreateDirectory(Path.Combine(Application.StartupPath, "images"));
+                File.Copy(selectedImagePath, destPath, true);
+            }
+
             var repo = new ProductRepository();
-            repo.AddProduct(txtProductName.Text.Trim(), price);
+            repo.AddProduct(txtProductName.Text.Trim(), price, savedImageName);
             MessageBox.Show("Product added successfully!");
             this.DialogResult = DialogResult.OK;
             this.Close();

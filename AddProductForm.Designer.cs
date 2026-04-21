@@ -34,6 +34,9 @@
             label3 = new Label();
             txtProductName = new TextBox();
             label2 = new Label();
+            pictureBoxProduct = new PictureBox();
+            label4 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -48,13 +51,12 @@
             label1.Size = new Size(145, 30);
             label1.TabIndex = 1;
             label1.Text = "Add Product";
-            label1.Click += label1_Click;
             // 
             // btnSave
             // 
             btnSave.Anchor = AnchorStyles.Top;
             btnSave.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSave.Location = new Point(200, 250);
+            btnSave.Location = new Point(193, 425);
             btnSave.Margin = new Padding(3, 2, 3, 2);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(91, 29);
@@ -93,7 +95,6 @@
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(270, 23);
             txtProductName.TabIndex = 7;
-            txtProductName.TextChanged += txtProductName_TextChanged;
             // 
             // label2
             // 
@@ -107,14 +108,39 @@
             label2.Size = new Size(120, 21);
             label2.TabIndex = 6;
             label2.Text = "Product Name";
-            label2.Click += label2_Click;
+            // 
+            // pictureBoxProduct
+            // 
+            pictureBoxProduct.BackColor = Color.FromArgb(255, 255, 192);
+            pictureBoxProduct.BorderStyle = BorderStyle.FixedSingle;
+            pictureBoxProduct.Location = new Point(193, 258);
+            pictureBoxProduct.Name = "pictureBoxProduct";
+            pictureBoxProduct.Size = new Size(155, 144);
+            pictureBoxProduct.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxProduct.TabIndex = 11;
+            pictureBoxProduct.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Top;
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(3, 53, 44);
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Snow;
+            label4.Location = new Point(72, 258);
+            label4.Name = "label4";
+            label4.Size = new Size(115, 21);
+            label4.TabIndex = 12;
+            label4.Text = "Picture (click)";
             // 
             // AddProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 53, 44);
-            ClientSize = new Size(502, 378);
+            ClientSize = new Size(502, 561);
+            Controls.Add(label4);
+            Controls.Add(pictureBoxProduct);
             Controls.Add(btnSave);
             Controls.Add(txtPrice);
             Controls.Add(label3);
@@ -125,7 +151,7 @@
             MaximizeBox = false;
             Name = "AddProductForm";
             Text = "AddProductForm";
-            Load += AddProductForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBoxProduct).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -138,5 +164,7 @@
         private Label label3;
         private TextBox txtProductName;
         private Label label2;
+        private PictureBox pictureBoxProduct;
+        private Label label4;
     }
 }

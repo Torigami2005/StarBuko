@@ -2,8 +2,11 @@ using System.ComponentModel;
 
 namespace StarBuko
 {
+
     public partial class Form1 : Form
     {
+
+        private int _lastTransactionId = 0;
         private User _currentUser;
         private List<Product> products = new List<Product>();
         private BindingList<Product> cart = new BindingList<Product>();
@@ -46,19 +49,6 @@ namespace StarBuko
             var repo = new ProductRepository();
             products = repo.GetActiveProducts();
 
-            // Map product name to image file
-            var imageMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-    {
-        { "Chocolate Chip", "images/chocolate_chip.jpg" },
-        { "Dark Caramel Frappucino", "images/dark_caramel_frappucino.jpg" },
-        { "Dragon Drink", "images/dragon_drink.jpeg" },
-        { "Matcha Latte", "images/matcha_latte.jpeg" },
-        { "Pink Drink", "images/pink_drink.jpeg" },
-        { "Strawberry Cream", "images/strawberries_cream.jpg" },
-        { "Strawberry Acai", "images/strawberry_acai.jpeg" },
-        { "XOXO Frappucino", "images/xoxo_frappucino.jpeg" }
-    };
-
             int x = 5, y = 5;
             int ctrlWidth = 430;
             int ctrlHeight = 180;
@@ -75,10 +65,9 @@ namespace StarBuko
                     Location = new Point(x, y)
                 };
 
-                // Load image if exists
-                if (imageMap.TryGetValue(product.prodName, out string imagePath))
+                if (!string.IsNullOrEmpty(product.ImageName))
                 {
-                    string fullPath = Path.Combine(Application.StartupPath, imagePath);
+                    string fullPath = Path.Combine(Application.StartupPath, "images", product.ImageName);
                     if (File.Exists(fullPath))
                         ctrl.PictureBoxImage = Image.FromFile(fullPath);
                 }
@@ -154,7 +143,8 @@ namespace StarBuko
             };
 
             new TransactionRepository().SaveTransaction(record);
-            MessageBox.Show("Transaction saved!");
+            _lastTransactionId = record.TransactionId;
+            MessageBox.Show("Transaction saved! You can now print the receipt.");
 
             cart.Clear();
             amountPrice.Text = "0.00";
@@ -194,6 +184,30 @@ namespace StarBuko
         private void btnNewProduct_Click_1(object sender, EventArgs e)
         {
             var form = new AddProductForm();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var reportForm = new AllTransactionsForm();
+            reportForm.ShowDialog();
+        }
+
+        private void btnReceipt_Click(object sender, EventArgs e)
+        {
+            if (_lastTransactionId == 0)
+            {
+                MessageBox.Show("No transaction yet. Please complete a transaction first.");
+                return;
+            }
+
+            var repo = new TransactionRepository();
+            var transaction = repo.GetTransactionById(_lastTransactionId);
+
+            if (transaction != null)
+            {
+                var receiptForm = new ReceiptForm(transaction);
+                receiptForm.ShowDialog();
+            }
         }
 
 

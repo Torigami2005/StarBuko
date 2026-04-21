@@ -40,6 +40,8 @@
             btnNewProduct = new Button();
             btnLogout = new Button();
             productPanel = new Panel();
+            btnReceipt = new Button();
+            btnGenerateReport = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridTable).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +52,7 @@
             dataGridTable.Location = new Point(948, 87);
             dataGridTable.Name = "dataGridTable";
             dataGridTable.RowHeadersWidth = 51;
-            dataGridTable.Size = new Size(612, 368);
+            dataGridTable.Size = new Size(612, 297);
             dataGridTable.TabIndex = 2;
             dataGridTable.CellContentClick += dataGridTable_CellContentClick;
             // 
@@ -61,7 +63,7 @@
             transactionButton.BackColor = Color.Green;
             transactionButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             transactionButton.ForeColor = SystemColors.ButtonHighlight;
-            transactionButton.Location = new Point(1178, 479);
+            transactionButton.Location = new Point(1180, 390);
             transactionButton.Name = "transactionButton";
             transactionButton.Size = new Size(149, 38);
             transactionButton.TabIndex = 9;
@@ -74,7 +76,7 @@
             label2.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(989, 531);
+            label2.Location = new Point(991, 442);
             label2.Name = "label2";
             label2.Size = new Size(138, 30);
             label2.TabIndex = 11;
@@ -86,7 +88,7 @@
             amountPrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             amountPrice.AutoSize = true;
             amountPrice.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            amountPrice.Location = new Point(1471, 531);
+            amountPrice.Location = new Point(1473, 442);
             amountPrice.Name = "amountPrice";
             amountPrice.Size = new Size(55, 30);
             amountPrice.TabIndex = 12;
@@ -98,7 +100,7 @@
             label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(948, 578);
+            label3.Location = new Point(950, 489);
             label3.Name = "label3";
             label3.Size = new Size(179, 30);
             label3.TabIndex = 13;
@@ -108,7 +110,7 @@
             // tenderedMoney
             // 
             tenderedMoney.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            tenderedMoney.Location = new Point(1386, 586);
+            tenderedMoney.Location = new Point(1388, 497);
             tenderedMoney.Name = "tenderedMoney";
             tenderedMoney.Size = new Size(173, 23);
             tenderedMoney.TabIndex = 14;
@@ -120,7 +122,7 @@
             label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(1043, 630);
+            label1.Location = new Point(1045, 541);
             label1.Name = "label1";
             label1.Size = new Size(84, 30);
             label1.TabIndex = 15;
@@ -132,7 +134,7 @@
             changePrice.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             changePrice.AutoSize = true;
             changePrice.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            changePrice.Location = new Point(1471, 630);
+            changePrice.Location = new Point(1473, 541);
             changePrice.Name = "changePrice";
             changePrice.Size = new Size(55, 30);
             changePrice.TabIndex = 16;
@@ -188,12 +190,44 @@
             productPanel.Size = new Size(913, 599);
             productPanel.TabIndex = 20;
             // 
+            // btnReceipt
+            // 
+            btnReceipt.AccessibleRole = AccessibleRole.None;
+            btnReceipt.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnReceipt.BackColor = Color.Blue;
+            btnReceipt.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReceipt.ForeColor = SystemColors.ButtonHighlight;
+            btnReceipt.Location = new Point(1000, 611);
+            btnReceipt.Name = "btnReceipt";
+            btnReceipt.Size = new Size(149, 38);
+            btnReceipt.TabIndex = 21;
+            btnReceipt.Text = "Print Receipt";
+            btnReceipt.UseVisualStyleBackColor = false;
+            btnReceipt.Click += btnReceipt_Click;
+            // 
+            // btnGenerateReport
+            // 
+            btnGenerateReport.AccessibleRole = AccessibleRole.None;
+            btnGenerateReport.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btnGenerateReport.BackColor = Color.Purple;
+            btnGenerateReport.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGenerateReport.ForeColor = SystemColors.ButtonHighlight;
+            btnGenerateReport.Location = new Point(1388, 611);
+            btnGenerateReport.Name = "btnGenerateReport";
+            btnGenerateReport.Size = new Size(149, 38);
+            btnGenerateReport.TabIndex = 22;
+            btnGenerateReport.Text = "Generate Report";
+            btnGenerateReport.UseVisualStyleBackColor = false;
+            btnGenerateReport.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1571, 705);
+            Controls.Add(btnGenerateReport);
+            Controls.Add(btnReceipt);
             Controls.Add(productPanel);
             Controls.Add(btnLogout);
             Controls.Add(btnNewProduct);
@@ -226,5 +260,7 @@
         private Button btnNewProduct;
         private Button btnLogout;
         private Panel productPanel;
+        private Button btnReceipt;
+        private Button btnGenerateReport;
     }
 }

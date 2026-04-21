@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+	<DataSets>
+		<DataSet Name="TransactionsDataSet">
+			<Fields>
+				<Field Name="TransactionId">
+					<DataField>TransactionId</DataField>
+				</Field>
+				<Field Name="CashierName">
+					<DataField>CashierName</DataField>
+				</Field>
+				<Field Name="TransactionDate">
+					<DataField>TransactionDate</DataField>
+				</Field>
+				<Field Name="TotalAmount">
+					<DataField>TotalAmount</DataField>
+				</Field>
+				<Field Name="Tendered">
+					<DataField>Tendered</DataField>
+				</Field>
+				<Field Name="ChangeAmount">
+					<DataField>ChangeAmount</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<DataSourceName>TransactionsDataSet</DataSourceName>
+				<CommandText></CommandText>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<Body>
+		<ReportItems>
+			<Textbox Name="txtTitle">
+				<Value>StarBuko - All Transactions Report</Value>
+				<Style>
+					<FontSize>16pt</FontSize>
+					<FontWeight>Bold</FontWeight>
+					<TextAlign>Center</TextAlign>
+				</Style>
+				<Top>0.1in</Top>
+				<Left>0in</Left>
+				<Width>7in</Width>
+				<Height>0.4in</Height>
+			</Textbox>
+			<Table Name="TransactionsTable">
+				<Top>0.6in</Top>
+				<Left>0in</Left>
+				<Width>7in</Width>
+				<DataSetName>TransactionsDataSet</DataSetName>
+				<TableColumns>
+					<TableColumn>
+						<Width>1in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.5in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>2in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1.5in</Width>
+					</TableColumn>
+					<TableColumn>
+						<Width>1in</Width>
+					</TableColumn>
+				</TableColumns>
+				<Header>
+					<TableRows>
+						<TableRow>
+							<Height>0.3in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hId">
+											<Value>Transaction ID</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+												<BackgroundColor>LightGreen</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hCashier">
+											<Value>Cashier</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+												<BackgroundColor>LightGreen</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hDate">
+											<Value>Date / Time</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+												<BackgroundColor>LightGreen</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hTotal">
+											<Value>Total Amount</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+												<BackgroundColor>LightGreen</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="hTendered">
+											<Value>Tendered</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>9pt</FontSize>
+												<BackgroundColor>LightGreen</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Header>
+				<Details>
+					<TableRows>
+						<TableRow>
+							<Height>0.25in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dId">
+											<Value>=Fields!TransactionId.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dCashier">
+											<Value>=Fields!CashierName.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dDate">
+											<Value>=Fields!TransactionDate.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dTotal">
+											<Value>=Fields!TotalAmount.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="dTendered">
+											<Value>=Fields!Tendered.Value</Value>
+											<Style>
+												<FontSize>9pt</FontSize>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Details>
+				<Footer>
+					<TableRows>
+						<TableRow>
+							<Height>0.3in</Height>
+							<TableCells>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="fEmpty1">
+											<Value></Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="fEmpty2">
+											<Value></Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="fGrandLabel">
+											<Value>Grand Total</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>10pt</FontSize>
+												<BackgroundColor>LightYellow</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="fGrandTotal">
+											<Value>=Sum(Fields!TotalAmount.Value)</Value>
+											<Style>
+												<FontWeight>Bold</FontWeight>
+												<FontSize>10pt</FontSize>
+												<BackgroundColor>LightYellow</BackgroundColor>
+											</Style>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+								<TableCell>
+									<ReportItems>
+										<Textbox Name="fEmpty3">
+											<Value></Value>
+										</Textbox>
+									</ReportItems>
+								</TableCell>
+							</TableCells>
+						</TableRow>
+					</TableRows>
+				</Footer>
+			</Table>
+		</ReportItems>
+		<Height>8in</Height>
+	</Body>
+	<Width>7in</Width>
+</Report>
