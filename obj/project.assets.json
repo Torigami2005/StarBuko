@@ -1,42 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0-windows7.0": {
+    ".NETFramework,Version=v4.8": {
       "BouncyCastle.Cryptography/2.6.2": {
         "type": "package",
         "compile": {
-          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/BouncyCastle.Cryptography.dll": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
             "related": ".xml"
           }
         }
       },
       "Google.Protobuf/3.32.0": {
         "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
         "compile": {
-          "lib/net5.0/Google.Protobuf.dll": {
+          "lib/net45/Google.Protobuf.dll": {
             "related": ".pdb;.xml"
           }
         },
         "runtime": {
-          "lib/net5.0/Google.Protobuf.dll": {
+          "lib/net45/Google.Protobuf.dll": {
             "related": ".pdb;.xml"
           }
         }
       },
       "K4os.Compression.LZ4/1.3.8": {
         "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net6.0/K4os.Compression.LZ4.dll": {
+          "lib/net462/K4os.Compression.LZ4.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/K4os.Compression.LZ4.dll": {
+          "lib/net462/K4os.Compression.LZ4.dll": {
             "related": ".xml"
           }
         }
@@ -46,517 +53,73 @@
         "dependencies": {
           "K4os.Compression.LZ4": "1.3.8",
           "K4os.Hash.xxHash": "1.0.8",
-          "System.IO.Pipelines": "6.0.3"
+          "System.IO.Pipelines": "5.0.2"
         },
         "compile": {
-          "lib/net6.0/K4os.Compression.LZ4.Streams.dll": {
+          "lib/net462/K4os.Compression.LZ4.Streams.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/K4os.Compression.LZ4.Streams.dll": {
+          "lib/net462/K4os.Compression.LZ4.Streams.dll": {
             "related": ".xml"
           }
         }
       },
       "K4os.Hash.xxHash/1.0.8": {
         "type": "package",
-        "compile": {
-          "lib/net6.0/K4os.Hash.xxHash.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/K4os.Hash.xxHash.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.CodeAnalysis.Analyzers/3.3.4": {
-        "type": "package",
-        "build": {
-          "buildTransitive/Microsoft.CodeAnalysis.Analyzers.props": {},
-          "buildTransitive/Microsoft.CodeAnalysis.Analyzers.targets": {}
-        }
-      },
-      "Microsoft.CodeAnalysis.Common/4.8.0": {
-        "type": "package",
         "dependencies": {
-          "Microsoft.CodeAnalysis.Analyzers": "3.3.4",
-          "System.Collections.Immutable": "7.0.0",
-          "System.Reflection.Metadata": "7.0.0",
+          "System.Memory": "4.5.5",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net7.0/Microsoft.CodeAnalysis.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "resource": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "cs"
-          },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "pl"
-          },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "Microsoft.CodeAnalysis.VisualBasic/4.8.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "[4.8.0]"
-        },
-        "compile": {
-          "lib/net7.0/Microsoft.CodeAnalysis.VisualBasic.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/Microsoft.CodeAnalysis.VisualBasic.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "resource": {
-          "lib/net7.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "cs"
-          },
-          "lib/net7.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net7.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net7.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net7.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net7.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net7.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net7.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "pl"
-          },
-          "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net7.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net7.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "Microsoft.Extensions.ObjectPool/8.0.10": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+          "lib/net462/K4os.Hash.xxHash.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.Extensions.ObjectPool.dll": {
+          "lib/net462/K4os.Hash.xxHash.dll": {
             "related": ".xml"
           }
         }
       },
-      "Microsoft.ReportingServices.ReportViewerControl.WebForms/150.1652.0": {
+      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.SqlServer.Types": "14.0.0"
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net40/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Design.dll": {},
-          "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WebDesign.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WebForms.dll": {}
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net40/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Design.dll": {},
-          "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WebDesign.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WebForms.dll": {}
-        },
-        "resource": {
-          "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.WebDesign.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.WebForms.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "zh-CHT"
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
           }
         }
       },
-      "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1652.0": {
+      "Microsoft.ReportViewer.Common/10.0.40219.1": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.SqlServer.Types": "14.0.0"
-        },
         "compile": {
-          "lib/net40/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Design.dll": {},
-          "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WinForms.dll": {}
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
         },
         "runtime": {
-          "lib/net40/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net40/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net40/Microsoft.ReportViewer.Design.dll": {},
-          "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll": {},
-          "lib/net40/Microsoft.ReportViewer.WinForms.dll": {}
-        },
-        "resource": {
-          "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/de/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/es/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/fr/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/it/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ja/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/ko/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/pt/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/ru/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHS/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "zh-CHS"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll": {
-            "locale": "zh-CHT"
-          },
-          "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll": {
-            "locale": "zh-CHT"
-          }
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
         }
       },
       "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
         "type": "package",
+        "frameworkAssemblies": [
+          "System.Windows.Forms"
+        ],
         "compile": {
           "lib/Microsoft.ReportViewer.WinForms.dll": {}
         },
@@ -564,54 +127,29 @@
           "lib/Microsoft.ReportViewer.WinForms.dll": {}
         }
       },
-      "Microsoft.SqlServer.Types/14.0.314.76": {
-        "type": "package",
-        "compile": {
-          "lib/net40/Microsoft.SqlServer.Types.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Microsoft.SqlServer.Types.dll": {}
-        }
-      },
-      "Microsoft.Win32.SystemEvents/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "MySql.Data/9.6.0": {
+      "MySql.Data/9.7.0": {
         "type": "package",
         "dependencies": {
           "BouncyCastle.Cryptography": "2.6.2",
           "Google.Protobuf": "3.32.0",
           "K4os.Compression.LZ4.Streams": "1.3.8",
           "System.Configuration.ConfigurationManager": "8.0.0",
-          "System.Security.Permissions": "8.0.0",
           "ZstdSharp.Port": "0.8.6"
         },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Data",
+          "System.Management",
+          "System.Transactions"
+        ],
         "compile": {
-          "lib/net8.0/MySql.Data.dll": {
+          "lib/net48/MySql.Data.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/MySql.Data.dll": {
+          "lib/net48/MySql.Data.dll": {
             "related": ".xml"
           }
         },
@@ -638,460 +176,446 @@
           }
         }
       },
-      "ReportViewerCore.NETCore/15.1.33": {
+      "System.Buffers/4.5.1": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.CodeAnalysis.VisualBasic": "4.8.0",
-          "System.CodeDom": "8.0.0",
-          "System.Drawing.Common": "8.0.0",
-          "System.IO.Packaging": "8.0.1",
-          "System.Resources.Extensions": "8.0.0",
-          "System.ServiceModel.Http": "8.1.0"
-        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net8.0/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net8.0/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net8.0/Microsoft.ReportViewer.NETCore.dll": {},
-          "lib/net8.0/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/Microsoft.ReportViewer.Common.dll": {},
-          "lib/net8.0/Microsoft.ReportViewer.DataVisualization.dll": {},
-          "lib/net8.0/Microsoft.ReportViewer.NETCore.dll": {},
-          "lib/net8.0/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
-        },
-        "resource": {
-          "lib/net8.0/de/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net8.0/es/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net8.0/fr/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net8.0/it/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net8.0/ja/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net8.0/ko/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net8.0/pt/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "pt"
-          },
-          "lib/net8.0/zh-Hans/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net8.0/zh-Hant/Microsoft.ReportViewer.Common.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "System.CodeDom/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.CodeDom.dll": {
+          "ref/net45/System.Buffers.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.CodeDom.dll": {
+          "lib/net461/System.Buffers.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.Collections.Immutable/7.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net7.0/System.Collections.Immutable.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net7.0/System.Collections.Immutable.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Configuration.ConfigurationManager/8.0.0": {
         "type": "package",
-        "dependencies": {
-          "System.Diagnostics.EventLog": "8.0.0",
-          "System.Security.Cryptography.ProtectedData": "8.0.0"
-        },
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
         "compile": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net462/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+          "lib/net462/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net6.0/_._": {}
+          "buildTransitive/net462/_._": {}
         }
       },
-      "System.Diagnostics.EventLog/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          },
-          "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
-      "System.Drawing.Common/8.0.0": {
+      "System.IO.Pipelines/5.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "8.0.0"
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net8.0/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Drawing.Common.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.IO.Packaging/8.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.IO.Packaging.dll": {
+          "lib/net461/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.IO.Packaging.dll": {
+          "lib/net461/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.IO.Pipelines/6.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/System.IO.Pipelines.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
-      "System.Reflection.Metadata/7.0.0": {
+      "System.Memory/4.5.5": {
         "type": "package",
         "dependencies": {
-          "System.Collections.Immutable": "7.0.0"
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net7.0/System.Reflection.Metadata.dll": {
+          "lib/net461/System.Memory.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net7.0/System.Reflection.Metadata.dll": {
+          "lib/net461/System.Memory.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Resources.Extensions/8.0.0": {
+      "System.Numerics.Vectors/4.5.0": {
         "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net8.0/System.Resources.Extensions.dll": {
+          "ref/net46/System.Numerics.Vectors.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Resources.Extensions.dll": {
+          "lib/net46/System.Numerics.Vectors.dll": {
             "related": ".xml"
           }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
             "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        }
-      },
-      "System.Security.Cryptography.Pkcs/8.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.Security.Cryptography.Pkcs.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Security.Cryptography.Pkcs.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll": {
-            "assetType": "runtime",
-            "rid": "win"
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.Security.Cryptography.Xml/8.0.2": {
+      "System.Threading.Tasks.Extensions/4.5.4": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.Pkcs": "8.0.1"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
         },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
         "compile": {
-          "lib/net8.0/System.Security.Cryptography.Xml.dll": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/System.Security.Cryptography.Xml.dll": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
             "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.Security.Permissions/8.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Windows.Extensions": "8.0.0"
-        },
-        "compile": {
-          "lib/net8.0/System.Security.Permissions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Security.Permissions.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "buildTransitive/net6.0/_._": {}
-        }
-      },
-      "System.ServiceModel.Http/8.1.0": {
-        "type": "package",
-        "dependencies": {
-          "System.ServiceModel.Primitives": "8.1.0"
-        },
-        "compile": {
-          "ref/net8.0/System.ServiceModel.Http.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/System.ServiceModel.Http.dll": {
-            "related": ".pdb"
-          }
-        },
-        "resource": {
-          "lib/net8.0/cs/System.ServiceModel.Http.resources.dll": {
-            "locale": "cs"
-          },
-          "lib/net8.0/de/System.ServiceModel.Http.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net8.0/es/System.ServiceModel.Http.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net8.0/fr/System.ServiceModel.Http.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net8.0/it/System.ServiceModel.Http.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net8.0/ja/System.ServiceModel.Http.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net8.0/ko/System.ServiceModel.Http.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net8.0/pl/System.ServiceModel.Http.resources.dll": {
-            "locale": "pl"
-          },
-          "lib/net8.0/pt-BR/System.ServiceModel.Http.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net8.0/ru/System.ServiceModel.Http.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net8.0/tr/System.ServiceModel.Http.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net8.0/zh-Hans/System.ServiceModel.Http.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net8.0/zh-Hant/System.ServiceModel.Http.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "System.ServiceModel.Primitives/8.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.ObjectPool": "8.0.10",
-          "System.Security.Cryptography.Xml": "8.0.2"
-        },
-        "compile": {
-          "ref/net8.0/System.ServiceModel.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/net8.0/System.ServiceModel.Duplex.dll": {
-            "related": ".pdb"
-          },
-          "lib/net8.0/System.ServiceModel.Primitives.dll": {
-            "related": ".pdb"
-          },
-          "lib/net8.0/System.ServiceModel.Security.dll": {
-            "related": ".pdb"
-          },
-          "lib/net8.0/System.ServiceModel.dll": {
-            "related": ".Duplex.pdb;.pdb;.Primitives.pdb;.Security.pdb"
-          }
-        },
-        "resource": {
-          "lib/net8.0/cs/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "cs"
-          },
-          "lib/net8.0/de/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "de"
-          },
-          "lib/net8.0/es/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "es"
-          },
-          "lib/net8.0/fr/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "fr"
-          },
-          "lib/net8.0/it/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "it"
-          },
-          "lib/net8.0/ja/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "ja"
-          },
-          "lib/net8.0/ko/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "ko"
-          },
-          "lib/net8.0/pl/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "pl"
-          },
-          "lib/net8.0/pt-BR/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "pt-BR"
-          },
-          "lib/net8.0/ru/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "ru"
-          },
-          "lib/net8.0/tr/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "tr"
-          },
-          "lib/net8.0/zh-Hans/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "zh-Hans"
-          },
-          "lib/net8.0/zh-Hant/System.ServiceModel.Primitives.resources.dll": {
-            "locale": "zh-Hant"
-          }
-        }
-      },
-      "System.Windows.Extensions/8.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/System.Windows.Extensions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/System.Windows.Extensions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/net8.0/System.Windows.Extensions.dll": {
-            "assetType": "runtime",
-            "rid": "win"
           }
         }
       },
       "ZstdSharp.Port/0.8.6": {
         "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
         "compile": {
-          "lib/net8.0/ZstdSharp.dll": {}
+          "lib/net462/ZstdSharp.dll": {}
         },
         "runtime": {
-          "lib/net8.0/ZstdSharp.dll": {}
+          "lib/net462/ZstdSharp.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.8/win-x86": {
+      "BouncyCastle.Cryptography/2.6.2": {
+        "type": "package",
+        "compile": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/BouncyCastle.Cryptography.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Google.Protobuf/3.32.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/net45/Google.Protobuf.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Google.Protobuf.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
+      "K4os.Compression.LZ4/1.3.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net462/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/K4os.Compression.LZ4.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "K4os.Compression.LZ4.Streams/1.3.8": {
+        "type": "package",
+        "dependencies": {
+          "K4os.Compression.LZ4": "1.3.8",
+          "K4os.Hash.xxHash": "1.0.8",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "compile": {
+          "lib/net462/K4os.Compression.LZ4.Streams.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/K4os.Compression.LZ4.Streams.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "K4os.Hash.xxHash/1.0.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net462/K4os.Hash.xxHash.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/K4os.Hash.xxHash.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.ReportViewer.Common/10.0.40219.1": {
+        "type": "package",
+        "compile": {
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.Common.dll": {},
+          "lib/Microsoft.ReportViewer.DataVisualization.dll": {},
+          "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll": {}
+        }
+      },
+      "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Windows.Forms"
+        ],
+        "compile": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {}
+        },
+        "runtime": {
+          "lib/Microsoft.ReportViewer.WinForms.dll": {}
+        }
+      },
+      "MySql.Data/9.7.0": {
+        "type": "package",
+        "dependencies": {
+          "BouncyCastle.Cryptography": "2.6.2",
+          "Google.Protobuf": "3.32.0",
+          "K4os.Compression.LZ4.Streams": "1.3.8",
+          "System.Configuration.ConfigurationManager": "8.0.0",
+          "ZstdSharp.Port": "0.8.6"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "System.Configuration",
+          "System.Data",
+          "System.Management",
+          "System.Transactions"
+        ],
+        "compile": {
+          "lib/net48/MySql.Data.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net48/MySql.Data.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net45/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Buffers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/8.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration"
+        ],
+        "compile": {
+          "lib/net462/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net462/System.Configuration.ConfigurationManager.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net462/_._": {}
+        }
+      },
+      "System.IO.Pipelines/5.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Memory": "4.5.4",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Memory/4.5.5": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.5.1",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Memory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "ZstdSharp.Port/0.8.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
+          "System.Memory": "4.5.5",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "compile": {
+          "lib/net462/ZstdSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net462/ZstdSharp.dll": {}
         }
       }
     }
@@ -1203,895 +727,40 @@
         "lib/netstandard2.1/K4os.Hash.xxHash.xml"
       ]
     },
-    "Microsoft.CodeAnalysis.Analyzers/3.3.4": {
-      "sha512": "AxkxcPR+rheX0SmvpLVIGLhOUXAKG56a64kV9VQZ4y9gR9ZmPXnqZvHJnmwLSwzrEP6junUF11vuc+aqo5r68g==",
+    "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
+      "sha512": "W8DPQjkMScOMTtJbPwmPyj9c3zYSFGawDW3jwlBOOsnY+EzZFLgNQ/UMkK35JmkNOVPdCyPr2Tw7Vv9N+KA3ZQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.analyzers/3.3.4",
-      "hasTools": true,
+      "path": "microsoft.bcl.asyncinterfaces/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "ThirdPartyNotices.txt",
-        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
-        "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
-        "analyzers/dotnet/cs/cs/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/de/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/es/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/fr/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/it/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/ja/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/ko/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/pl/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/pt-BR/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/ru/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/tr/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/zh-Hans/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/cs/zh-Hant/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/Microsoft.CodeAnalysis.Analyzers.dll",
-        "analyzers/dotnet/vb/Microsoft.CodeAnalysis.VisualBasic.Analyzers.dll",
-        "analyzers/dotnet/vb/cs/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/de/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/es/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/fr/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/it/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/ja/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/ko/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/pl/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/pt-BR/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/ru/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/tr/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/zh-Hans/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "analyzers/dotnet/vb/zh-Hant/Microsoft.CodeAnalysis.Analyzers.resources.dll",
-        "buildTransitive/Microsoft.CodeAnalysis.Analyzers.props",
-        "buildTransitive/Microsoft.CodeAnalysis.Analyzers.targets",
-        "buildTransitive/config/analysislevel_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevel_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevel_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_all.globalconfig",
-        "buildTransitive/config/analysislevel_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_default.globalconfig",
-        "buildTransitive/config/analysislevel_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevel_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_none.globalconfig",
-        "buildTransitive/config/analysislevel_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevel_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevel_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_all.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_default.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_none.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelcorrectness_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevellibrary_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_all.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_default.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_none.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevellibrary_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevellibrary_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscompatibility_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysiscorrectness_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdesign_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisdocumentation_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysislocalization_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisperformance_4_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_recommended_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_all.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_all_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_default.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_default_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_minimum.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_minimum_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_none.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_none_warnaserror.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_recommended.globalconfig",
-        "buildTransitive/config/analysislevelmicrosoftcodeanalysisreleasetracking_4_3_recommended_warnaserror.globalconfig",
-        "documentation/Analyzer Configuration.md",
-        "documentation/Microsoft.CodeAnalysis.Analyzers.md",
-        "documentation/Microsoft.CodeAnalysis.Analyzers.sarif",
-        "editorconfig/AllRulesDefault/.editorconfig",
-        "editorconfig/AllRulesDisabled/.editorconfig",
-        "editorconfig/AllRulesEnabled/.editorconfig",
-        "editorconfig/CorrectnessRulesDefault/.editorconfig",
-        "editorconfig/CorrectnessRulesEnabled/.editorconfig",
-        "editorconfig/DataflowRulesDefault/.editorconfig",
-        "editorconfig/DataflowRulesEnabled/.editorconfig",
-        "editorconfig/LibraryRulesDefault/.editorconfig",
-        "editorconfig/LibraryRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisCompatibilityRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisCompatibilityRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisCorrectnessRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisCorrectnessRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisDesignRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisDesignRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisDocumentationRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisDocumentationRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisLocalizationRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisLocalizationRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisPerformanceRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisPerformanceRulesEnabled/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisReleaseTrackingRulesDefault/.editorconfig",
-        "editorconfig/MicrosoftCodeAnalysisReleaseTrackingRulesEnabled/.editorconfig",
-        "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
-        "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
-        "microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
-        "microsoft.codeanalysis.analyzers.nuspec",
-        "rulesets/AllRulesDefault.ruleset",
-        "rulesets/AllRulesDisabled.ruleset",
-        "rulesets/AllRulesEnabled.ruleset",
-        "rulesets/CorrectnessRulesDefault.ruleset",
-        "rulesets/CorrectnessRulesEnabled.ruleset",
-        "rulesets/DataflowRulesDefault.ruleset",
-        "rulesets/DataflowRulesEnabled.ruleset",
-        "rulesets/LibraryRulesDefault.ruleset",
-        "rulesets/LibraryRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisCompatibilityRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisCompatibilityRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisCorrectnessRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisCorrectnessRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisDesignRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisDesignRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisDocumentationRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisDocumentationRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisLocalizationRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisLocalizationRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisPerformanceRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisPerformanceRulesEnabled.ruleset",
-        "rulesets/MicrosoftCodeAnalysisReleaseTrackingRulesDefault.ruleset",
-        "rulesets/MicrosoftCodeAnalysisReleaseTrackingRulesEnabled.ruleset",
-        "rulesets/PortedFromFxCopRulesDefault.ruleset",
-        "rulesets/PortedFromFxCopRulesEnabled.ruleset",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
-    "Microsoft.CodeAnalysis.Common/4.8.0": {
-      "sha512": "/jR+e/9aT+BApoQJABlVCKnnggGQbvGh7BKq2/wI1LamxC+LbzhcLj4Vj7gXCofl1n4E521YfF9w0WcASGg/KA==",
-      "type": "package",
-      "path": "microsoft.codeanalysis.common/4.8.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "ThirdPartyNotices.rtf",
-        "lib/net6.0/Microsoft.CodeAnalysis.dll",
-        "lib/net6.0/Microsoft.CodeAnalysis.pdb",
-        "lib/net6.0/Microsoft.CodeAnalysis.xml",
-        "lib/net6.0/cs/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/de/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/es/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/fr/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/it/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/ja/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/ko/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/pl/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/pt-BR/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/ru/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/tr/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net6.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.pdb",
-        "lib/net7.0/Microsoft.CodeAnalysis.xml",
-        "lib/net7.0/cs/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/de/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/es/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/fr/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/it/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/ja/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/ko/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/pl/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/ru/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/tr/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
-        "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/Microsoft.CodeAnalysis.dll",
-        "lib/netstandard2.0/Microsoft.CodeAnalysis.pdb",
-        "lib/netstandard2.0/Microsoft.CodeAnalysis.xml",
-        "lib/netstandard2.0/cs/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/de/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/es/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/fr/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/it/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/ja/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/ko/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/pl/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/pt-BR/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/ru/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
-        "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "microsoft.codeanalysis.common.4.8.0.nupkg.sha512",
-        "microsoft.codeanalysis.common.nuspec"
-      ]
-    },
-    "Microsoft.CodeAnalysis.VisualBasic/4.8.0": {
-      "sha512": "kfHPh/etcWypMDYfHxgfitgJMhi986OFCICb76RPcA1Toordf6bBYEJytWr2L5CNdkXFWuw5qTkrlsktBav4VA==",
-      "type": "package",
-      "path": "microsoft.codeanalysis.visualbasic/4.8.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "ThirdPartyNotices.rtf",
-        "lib/net6.0/Microsoft.CodeAnalysis.VisualBasic.dll",
-        "lib/net6.0/Microsoft.CodeAnalysis.VisualBasic.pdb",
-        "lib/net6.0/Microsoft.CodeAnalysis.VisualBasic.xml",
-        "lib/net6.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net6.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.VisualBasic.dll",
-        "lib/net7.0/Microsoft.CodeAnalysis.VisualBasic.pdb",
-        "lib/net7.0/Microsoft.CodeAnalysis.VisualBasic.xml",
-        "lib/net7.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/net7.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/Microsoft.CodeAnalysis.VisualBasic.dll",
-        "lib/netstandard2.0/Microsoft.CodeAnalysis.VisualBasic.pdb",
-        "lib/netstandard2.0/Microsoft.CodeAnalysis.VisualBasic.xml",
-        "lib/netstandard2.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "microsoft.codeanalysis.visualbasic.4.8.0.nupkg.sha512",
-        "microsoft.codeanalysis.visualbasic.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.ObjectPool/8.0.10": {
-      "sha512": "u7gAG7JgxF8VSJUGPSudAcPxOt+ymJKQCSxNRxiuKV+klCQbHljQR75SilpedCTfhPWDhtUwIJpnDVtspr9nMg==",
-      "type": "package",
-      "path": "microsoft.extensions.objectpool/8.0.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
+        "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net462/Microsoft.Extensions.ObjectPool.dll",
-        "lib/net462/Microsoft.Extensions.ObjectPool.xml",
-        "lib/net8.0/Microsoft.Extensions.ObjectPool.dll",
-        "lib/net8.0/Microsoft.Extensions.ObjectPool.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.xml",
-        "microsoft.extensions.objectpool.8.0.10.nupkg.sha512",
-        "microsoft.extensions.objectpool.nuspec"
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/net461/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll",
+        "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml",
+        "microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
+        "microsoft.bcl.asyncinterfaces.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "Microsoft.ReportingServices.ReportViewerControl.WebForms/150.1652.0": {
-      "sha512": "Y0gZS3o9Y2HvTV/XjZ06kJ4PJxmlb7CE9jPgwtSMvGUkIF9NK8JBRUsEMSHgrXQaKXu4LtVL1HkcyGFebaVjnA==",
+    "Microsoft.ReportViewer.Common/10.0.40219.1": {
+      "sha512": "BvYKVVgeRwdwiqCDUdIbaV179YIXg4RD+MlHI4KndReULmM2xO6KGlYmxOOMB/Lq5ktwFuMVyChbZgpgUqEgHw==",
       "type": "package",
-      "path": "microsoft.reportingservices.reportviewercontrol.webforms/150.1652.0",
+      "path": "microsoft.reportviewer.common/10.0.40219.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "content/web.config.install.xdt",
-        "lib/net40/Microsoft.ReportViewer.Common.dll",
-        "lib/net40/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.DataVisualization.dll",
-        "lib/net40/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.Design.dll",
-        "lib/net40/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll",
-        "lib/net40/Microsoft.ReportViewer.WebDesign.dll",
-        "lib/net40/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.WebForms.dll",
-        "lib/net40/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.WinForms.dll",
-        "lib/net40/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.WebDesign.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.WebForms.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll",
-        "license/License_ReportViewer.rtf",
-        "license/ThirdPartyNotices_ReportViewer.txt",
-        "microsoft.reportingservices.reportviewercontrol.webforms.150.1652.0.nupkg.sha512",
-        "microsoft.reportingservices.reportviewercontrol.webforms.nuspec"
-      ]
-    },
-    "Microsoft.ReportingServices.ReportViewerControl.Winforms/150.1652.0": {
-      "sha512": "635TIM0OY7vreXBj5xTx2bV+lnMgCaKcPT+UzRghF7HGVVwfKfZD5Bv7Kcj/3rzVe96POj5h9YT5IYqXGLu7vA==",
-      "type": "package",
-      "path": "microsoft.reportingservices.reportviewercontrol.winforms/150.1652.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/Microsoft.ReportViewer.Common.dll",
-        "lib/net40/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.DataVisualization.dll",
-        "lib/net40/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.Design.dll",
-        "lib/net40/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/Microsoft.ReportViewer.ProcessingObjectModel.dll",
-        "lib/net40/Microsoft.ReportViewer.WinForms.dll",
-        "lib/net40/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/de/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/es/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/fr/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/it/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/ja/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/ko/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/pt/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/ru/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/zh-CHS/Microsoft.ReportViewer.WinForms.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.DataVisualization.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.Design.resources.dll",
-        "lib/net40/zh-CHT/Microsoft.ReportViewer.WinForms.resources.dll",
-        "license/License_ReportViewer.rtf",
-        "license/ThirdPartyNotices_ReportViewer.txt",
-        "microsoft.reportingservices.reportviewercontrol.winforms.150.1652.0.nupkg.sha512",
-        "microsoft.reportingservices.reportviewercontrol.winforms.nuspec"
+        "lib/Microsoft.ReportViewer.Common.dll",
+        "lib/Microsoft.ReportViewer.DataVisualization.dll",
+        "lib/Microsoft.ReportViewer.ProcessingObjectModel.dll",
+        "microsoft.reportviewer.common.10.0.40219.1.nupkg.sha512",
+        "microsoft.reportviewer.common.nuspec"
       ]
     },
     "Microsoft.ReportViewer.WinForms/10.0.40219.1": {
@@ -2106,67 +775,10 @@
         "microsoft.reportviewer.winforms.nuspec"
       ]
     },
-    "Microsoft.SqlServer.Types/14.0.314.76": {
-      "sha512": "gAekCmSfjtRBaiuuRIqJJV6cfEsEbYY5vI7Ssoc5sYI04JcyPrZ4C8RC3z7K9xfpr9ejQAQ1AtfvtgqEnjmwOw==",
+    "MySql.Data/9.7.0": {
+      "sha512": "yJRZnwqOaKd7DXdbim2/gznKnt4kJEYUe/+PdbopY0WC+2UPcYGOtuSrHrBOAoKEpO66p5TGwlP4hQ233SBAKA==",
       "type": "package",
-      "path": "microsoft.sqlserver.types/14.0.314.76",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/SqlServerTypes/Loader.cs",
-        "content/SqlServerTypes/readme.htm",
-        "lib/net40/Microsoft.SqlServer.Types.dll",
-        "license/license_SysClrTypes.rtf",
-        "microsoft.sqlserver.types.14.0.314.76.nupkg.sha512",
-        "microsoft.sqlserver.types.nuspec",
-        "nativeBinaries/x64/SqlServerSpatial140.dll",
-        "nativeBinaries/x64/msvcr120.dll",
-        "nativeBinaries/x86/SqlServerSpatial140.dll",
-        "nativeBinaries/x86/msvcr120.dll",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
-      ]
-    },
-    "Microsoft.Win32.SystemEvents/8.0.0": {
-      "sha512": "9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
-      "type": "package",
-      "path": "microsoft.win32.systemevents/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
-        "lib/net462/Microsoft.Win32.SystemEvents.dll",
-        "lib/net462/Microsoft.Win32.SystemEvents.xml",
-        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/net8.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/net8.0/Microsoft.Win32.SystemEvents.xml",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.8.0.0.nupkg.sha512",
-        "microsoft.win32.systemevents.nuspec",
-        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.xml",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "MySql.Data/9.6.0": {
-      "sha512": "jjCXNBxLLQHBcyYyOP4yp5jqljStH2qGFXXg3jBMdwYQk9ihpLH9BXoMyc/J3421pENBDjCf/eGi9Ow0Ib7LUA==",
-      "type": "package",
-      "path": "mysql.data/9.6.0",
+      "path": "mysql.data/9.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2188,7 +800,7 @@
         "lib/netstandard2.1/MySql.Data.dll",
         "lib/netstandard2.1/MySql.Data.xml",
         "logo-mysql-170x115.png",
-        "mysql.data.9.6.0.nupkg.sha512",
+        "mysql.data.9.7.0.nupkg.sha512",
         "mysql.data.nuspec",
         "runtimes/win-x64/native/comerr64.dll",
         "runtimes/win-x64/native/gssapi64.dll",
@@ -2197,113 +809,35 @@
         "runtimes/win-x64/native/krbcc64.dll"
       ]
     },
-    "ReportViewerCore.NETCore/15.1.33": {
-      "sha512": "r4d0EBSV3A7xDUMMkwT8uBrOkFHV0J92LwOnbh2Rq9TglzWhawig9bgj4/k/vM8ret0cz1pex5nAZNjLzLT9QQ==",
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
       "type": "package",
-      "path": "reportviewercore.netcore/15.1.33",
+      "path": "system.buffers/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "docs/README.md",
-        "images/icon.png",
-        "lib/net10.0/Microsoft.ReportViewer.Common.dll",
-        "lib/net10.0/Microsoft.ReportViewer.DataVisualization.dll",
-        "lib/net10.0/Microsoft.ReportViewer.NETCore.dll",
-        "lib/net10.0/Microsoft.ReportViewer.ProcessingObjectModel.dll",
-        "lib/net10.0/de/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/es/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/fr/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/it/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/ja/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/ko/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/pt/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/zh-Hans/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net10.0/zh-Hant/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/Microsoft.ReportViewer.Common.dll",
-        "lib/net8.0/Microsoft.ReportViewer.DataVisualization.dll",
-        "lib/net8.0/Microsoft.ReportViewer.NETCore.dll",
-        "lib/net8.0/Microsoft.ReportViewer.ProcessingObjectModel.dll",
-        "lib/net8.0/de/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/es/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/fr/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/it/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/ja/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/ko/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/pt/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/zh-Hans/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net8.0/zh-Hant/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/Microsoft.ReportViewer.Common.dll",
-        "lib/net9.0/Microsoft.ReportViewer.DataVisualization.dll",
-        "lib/net9.0/Microsoft.ReportViewer.NETCore.dll",
-        "lib/net9.0/Microsoft.ReportViewer.ProcessingObjectModel.dll",
-        "lib/net9.0/de/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/es/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/fr/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/it/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/ja/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/ko/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/pt/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/zh-Hans/Microsoft.ReportViewer.Common.resources.dll",
-        "lib/net9.0/zh-Hant/Microsoft.ReportViewer.Common.resources.dll",
-        "reportviewercore.netcore.15.1.33.nupkg.sha512",
-        "reportviewercore.netcore.nuspec"
-      ]
-    },
-    "System.CodeDom/8.0.0": {
-      "sha512": "WTlRjL6KWIMr/pAaq3rYqh0TJlzpouaQ/W1eelssHgtlwHAH25jXTkUphTYx9HaIIf7XA6qs/0+YhtLEQRkJ+Q==",
-      "type": "package",
-      "path": "system.codedom/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.CodeDom.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
-        "lib/net462/System.CodeDom.dll",
-        "lib/net462/System.CodeDom.xml",
-        "lib/net6.0/System.CodeDom.dll",
-        "lib/net6.0/System.CodeDom.xml",
-        "lib/net7.0/System.CodeDom.dll",
-        "lib/net7.0/System.CodeDom.xml",
-        "lib/net8.0/System.CodeDom.dll",
-        "lib/net8.0/System.CodeDom.xml",
-        "lib/netstandard2.0/System.CodeDom.dll",
-        "lib/netstandard2.0/System.CodeDom.xml",
-        "system.codedom.8.0.0.nupkg.sha512",
-        "system.codedom.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Collections.Immutable/7.0.0": {
-      "sha512": "dQPcs0U1IKnBdRDBkrCTi1FoajSTBzLcVTpjO4MBCMC7f4pDOIPzgBoX8JjG7X6uZRJ8EBxsi8+DR1JuwjnzOQ==",
-      "type": "package",
-      "path": "system.collections.immutable/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Collections.Immutable.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Collections.Immutable.targets",
-        "lib/net462/System.Collections.Immutable.dll",
-        "lib/net462/System.Collections.Immutable.xml",
-        "lib/net6.0/System.Collections.Immutable.dll",
-        "lib/net6.0/System.Collections.Immutable.xml",
-        "lib/net7.0/System.Collections.Immutable.dll",
-        "lib/net7.0/System.Collections.Immutable.xml",
-        "lib/netstandard2.0/System.Collections.Immutable.dll",
-        "lib/netstandard2.0/System.Collections.Immutable.xml",
-        "system.collections.immutable.7.0.0.nupkg.sha512",
-        "system.collections.immutable.nuspec",
-        "useSharedDesignerContext.txt"
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Configuration.ConfigurationManager/8.0.0": {
@@ -2336,194 +870,100 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Diagnostics.EventLog/8.0.0": {
-      "sha512": "fdYxcRjQqTTacKId/2IECojlDSFvp7LP5N78+0z/xH7v/Tuw5ZAxu23Y6PTCRinqyu2ePx+Gn1098NC6jM6d+A==",
+    "System.IO.Pipelines/5.0.2": {
+      "sha512": "Iew+dfa6FFiyvWBdRmXApixRY1db+beyutpIck4SOSe0NLM8FD/7AD54MscqVLhvfSMLHO7KadjTRT7fqxOGTA==",
       "type": "package",
-      "path": "system.diagnostics.eventlog/8.0.0",
+      "path": "system.io.pipelines/5.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
-        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Diagnostics.EventLog.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Diagnostics.EventLog.targets",
-        "lib/net462/System.Diagnostics.EventLog.dll",
-        "lib/net462/System.Diagnostics.EventLog.xml",
-        "lib/net6.0/System.Diagnostics.EventLog.dll",
-        "lib/net6.0/System.Diagnostics.EventLog.xml",
-        "lib/net7.0/System.Diagnostics.EventLog.dll",
-        "lib/net7.0/System.Diagnostics.EventLog.xml",
-        "lib/net8.0/System.Diagnostics.EventLog.dll",
-        "lib/net8.0/System.Diagnostics.EventLog.xml",
-        "lib/netstandard2.0/System.Diagnostics.EventLog.dll",
-        "lib/netstandard2.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.Messages.dll",
-        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/net6.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.Messages.dll",
-        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/net7.0/System.Diagnostics.EventLog.xml",
-        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll",
-        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.dll",
-        "runtimes/win/lib/net8.0/System.Diagnostics.EventLog.xml",
-        "system.diagnostics.eventlog.8.0.0.nupkg.sha512",
-        "system.diagnostics.eventlog.nuspec",
-        "useSharedDesignerContext.txt"
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.0/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.0/System.IO.Pipelines.xml",
+        "lib/netstandard1.3/System.IO.Pipelines.dll",
+        "lib/netstandard1.3/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "ref/netcoreapp2.0/System.IO.Pipelines.dll",
+        "ref/netcoreapp2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.5.0.2.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
-    "System.Drawing.Common/8.0.0": {
-      "sha512": "JkbHJjtI/dWc5dfmEdJlbe3VwgZqCkZRtfuWFh5GOv0f+gGCfBtzMpIVkmdkj2AObO9y+oiOi81UGwH3aBYuqA==",
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
-      "path": "system.drawing.common/8.0.0",
+      "path": "system.memory/4.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Drawing.Common.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/net461/System.Memory.dll",
+        "lib/net461/System.Memory.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.5.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net462/System.Drawing.Common.dll",
-        "lib/net462/System.Drawing.Common.pdb",
-        "lib/net462/System.Drawing.Common.xml",
-        "lib/net6.0/System.Drawing.Common.dll",
-        "lib/net6.0/System.Drawing.Common.pdb",
-        "lib/net6.0/System.Drawing.Common.xml",
-        "lib/net7.0/System.Drawing.Common.dll",
-        "lib/net7.0/System.Drawing.Common.pdb",
-        "lib/net7.0/System.Drawing.Common.xml",
-        "lib/net8.0/System.Drawing.Common.dll",
-        "lib/net8.0/System.Drawing.Common.pdb",
-        "lib/net8.0/System.Drawing.Common.xml",
-        "lib/netstandard2.0/System.Drawing.Common.dll",
-        "lib/netstandard2.0/System.Drawing.Common.pdb",
-        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/uap10.0.16299/_._",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.drawing.common.8.0.0.nupkg.sha512",
-        "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.IO.Packaging/8.0.1": {
-      "sha512": "KYkIOAvPexQOLDxPO2g0BVoWInnQhPpkFzRqvNrNrMhVT6kqhVr0zEb6KCHlptLFukxnZrjuMVAnxK7pOGUYrw==",
-      "type": "package",
-      "path": "system.io.packaging/8.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.IO.Packaging.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.IO.Packaging.targets",
-        "lib/net462/System.IO.Packaging.dll",
-        "lib/net462/System.IO.Packaging.xml",
-        "lib/net6.0/System.IO.Packaging.dll",
-        "lib/net6.0/System.IO.Packaging.xml",
-        "lib/net7.0/System.IO.Packaging.dll",
-        "lib/net7.0/System.IO.Packaging.xml",
-        "lib/net8.0/System.IO.Packaging.dll",
-        "lib/net8.0/System.IO.Packaging.xml",
-        "lib/netstandard2.0/System.IO.Packaging.dll",
-        "lib/netstandard2.0/System.IO.Packaging.xml",
-        "system.io.packaging.8.0.1.nupkg.sha512",
-        "system.io.packaging.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.IO.Pipelines/6.0.3": {
-      "sha512": "ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
-      "type": "package",
-      "path": "system.io.pipelines/6.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.IO.Pipelines.dll",
-        "lib/net461/System.IO.Pipelines.xml",
-        "lib/net6.0/System.IO.Pipelines.dll",
-        "lib/net6.0/System.IO.Pipelines.xml",
-        "lib/netcoreapp3.1/System.IO.Pipelines.dll",
-        "lib/netcoreapp3.1/System.IO.Pipelines.xml",
-        "lib/netstandard2.0/System.IO.Pipelines.dll",
-        "lib/netstandard2.0/System.IO.Pipelines.xml",
-        "system.io.pipelines.6.0.3.nupkg.sha512",
-        "system.io.pipelines.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Reflection.Metadata/7.0.0": {
-      "sha512": "MclTG61lsD9sYdpNz9xsKBzjsmsfCtcMZYXz/IUr2zlhaTaABonlr1ESeompTgM+Xk+IwtGYU7/voh3YWB/fWw==",
-      "type": "package",
-      "path": "system.reflection.metadata/7.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Reflection.Metadata.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Reflection.Metadata.targets",
-        "lib/net462/System.Reflection.Metadata.dll",
-        "lib/net462/System.Reflection.Metadata.xml",
-        "lib/net6.0/System.Reflection.Metadata.dll",
-        "lib/net6.0/System.Reflection.Metadata.xml",
-        "lib/net7.0/System.Reflection.Metadata.dll",
-        "lib/net7.0/System.Reflection.Metadata.xml",
-        "lib/netstandard2.0/System.Reflection.Metadata.dll",
-        "lib/netstandard2.0/System.Reflection.Metadata.xml",
-        "system.reflection.metadata.7.0.0.nupkg.sha512",
-        "system.reflection.metadata.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Resources.Extensions/8.0.0": {
-      "sha512": "psnQ6GRQOvt+evda5C4nD5EuV49mz2Tv0DD2JDVDEbE/TKoMukxSkGJcsBJ0pajpPuFRr67syFYlkJ4Wj6A5Zw==",
-      "type": "package",
-      "path": "system.resources.extensions/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Resources.Extensions.targets",
-        "buildTransitive/net462/System.Resources.Extensions.targets",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Resources.Extensions.targets",
-        "lib/net462/System.Resources.Extensions.dll",
-        "lib/net462/System.Resources.Extensions.xml",
-        "lib/net6.0/System.Resources.Extensions.dll",
-        "lib/net6.0/System.Resources.Extensions.xml",
-        "lib/net7.0/System.Resources.Extensions.dll",
-        "lib/net7.0/System.Resources.Extensions.xml",
-        "lib/net8.0/System.Resources.Extensions.dll",
-        "lib/net8.0/System.Resources.Extensions.xml",
-        "lib/netstandard2.0/System.Resources.Extensions.dll",
-        "lib/netstandard2.0/System.Resources.Extensions.xml",
-        "system.resources.extensions.8.0.0.nupkg.sha512",
-        "system.resources.extensions.nuspec",
-        "useSharedDesignerContext.txt"
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.Numerics.Vectors.dll",
+        "ref/net45/System.Numerics.Vectors.xml",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.5.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -2551,264 +991,41 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.Pkcs/8.0.1": {
-      "sha512": "CoCRHFym33aUSf/NtWSVSZa99dkd0Hm7OCZUxORBjRB16LNhIEOf8THPqzIYlvKM0nNDAPTRBa1FxEECrgaxxA==",
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "type": "package",
-      "path": "system.security.cryptography.pkcs/8.0.1",
+      "path": "system.threading.tasks.extensions/4.5.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Security.Cryptography.Pkcs.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Pkcs.targets",
-        "lib/net462/System.Security.Cryptography.Pkcs.dll",
-        "lib/net462/System.Security.Cryptography.Pkcs.xml",
-        "lib/net6.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/net6.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/net7.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/net7.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/net8.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/net8.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Pkcs.xml",
-        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.dll",
-        "lib/netstandard2.1/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/net7.0/System.Security.Cryptography.Pkcs.xml",
-        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll",
-        "runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.xml",
-        "system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
-        "system.security.cryptography.pkcs.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Security.Cryptography.ProtectedData/8.0.0": {
-      "sha512": "+TUFINV2q2ifyXauQXRwy4CiBhqvDEDZeVJU7qfxya4aRYOKzVBpN+4acx25VcPB9ywUN6C0n8drWl110PhZEg==",
-      "type": "package",
-      "path": "system.security.cryptography.protecteddata/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Security.Cryptography.ProtectedData.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.ProtectedData.targets",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net462/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net462/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net6.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net6.0/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net7.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net7.0/System.Security.Cryptography.ProtectedData.xml",
-        "lib/net8.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/net8.0/System.Security.Cryptography.ProtectedData.xml",
-        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
-        "system.security.cryptography.protecteddata.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Security.Cryptography.Xml/8.0.2": {
-      "sha512": "aDM/wm0ZGEZ6ZYJLzgqjp2FZdHbDHh6/OmpGfb7AdZ105zYmPn/83JRU2xLIbwgoNz9U1SLUTJN0v5th3qmvjA==",
-      "type": "package",
-      "path": "system.security.cryptography.xml/8.0.2",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Security.Cryptography.Xml.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Security.Cryptography.Xml.targets",
-        "lib/net462/System.Security.Cryptography.Xml.dll",
-        "lib/net462/System.Security.Cryptography.Xml.xml",
-        "lib/net6.0/System.Security.Cryptography.Xml.dll",
-        "lib/net6.0/System.Security.Cryptography.Xml.xml",
-        "lib/net7.0/System.Security.Cryptography.Xml.dll",
-        "lib/net7.0/System.Security.Cryptography.Xml.xml",
-        "lib/net8.0/System.Security.Cryptography.Xml.dll",
-        "lib/net8.0/System.Security.Cryptography.Xml.xml",
-        "lib/netstandard2.0/System.Security.Cryptography.Xml.dll",
-        "lib/netstandard2.0/System.Security.Cryptography.Xml.xml",
-        "system.security.cryptography.xml.8.0.2.nupkg.sha512",
-        "system.security.cryptography.xml.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.Security.Permissions/8.0.0": {
-      "sha512": "v/BBylw7XevuAsHXoX9dDUUfmBIcUf7Lkz8K3ZXIKz3YRKpw8YftpSir4n4e/jDTKFoaK37AsC3xnk+GNFI1Ow==",
-      "type": "package",
-      "path": "system.security.permissions/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/System.Security.Permissions.targets",
-        "buildTransitive/net462/_._",
-        "buildTransitive/net6.0/_._",
-        "buildTransitive/netcoreapp2.0/System.Security.Permissions.targets",
-        "lib/net462/System.Security.Permissions.dll",
-        "lib/net462/System.Security.Permissions.xml",
-        "lib/net6.0/System.Security.Permissions.dll",
-        "lib/net6.0/System.Security.Permissions.xml",
-        "lib/net7.0/System.Security.Permissions.dll",
-        "lib/net7.0/System.Security.Permissions.xml",
-        "lib/net8.0/System.Security.Permissions.dll",
-        "lib/net8.0/System.Security.Permissions.xml",
-        "lib/netstandard2.0/System.Security.Permissions.dll",
-        "lib/netstandard2.0/System.Security.Permissions.xml",
-        "system.security.permissions.8.0.0.nupkg.sha512",
-        "system.security.permissions.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
-    "System.ServiceModel.Http/8.1.0": {
-      "sha512": "xGyo7hO2S7tRVvCDpWiQYeuSQZ0DcuDPHfX7JC3ncAjwsqCOqTATRAylGCxU0lW1iE4fjDACYT8hHo/hin9csA==",
-      "type": "package",
-      "path": "system.servicemodel.http/8.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net462/System.ServiceModel.Http.dll",
-        "lib/net462/System.ServiceModel.Http.pdb",
-        "lib/net8.0/System.ServiceModel.Http.dll",
-        "lib/net8.0/System.ServiceModel.Http.pdb",
-        "lib/net8.0/cs/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/de/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/es/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/fr/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/it/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/ja/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/ko/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/pl/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/pt-BR/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/ru/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/tr/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/zh-Hans/System.ServiceModel.Http.resources.dll",
-        "lib/net8.0/zh-Hant/System.ServiceModel.Http.resources.dll",
-        "lib/netstandard2.0/System.ServiceModel.Http.dll",
-        "lib/netstandard2.0/System.ServiceModel.Http.pdb",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/net462/System.ServiceModel.Http.dll",
-        "ref/net8.0/System.ServiceModel.Http.dll",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard2.0/System.ServiceModel.Http.dll",
-        "system.servicemodel.http.8.1.0.nupkg.sha512",
-        "system.servicemodel.http.nuspec"
-      ]
-    },
-    "System.ServiceModel.Primitives/8.1.0": {
-      "sha512": "/NGnzQSp2lmTlCfKzcD2PVKRnx6bQCbEqlb5sXo31TA2C7oA8g5I7Wfjk8dNRNUo1uSqZUcj3htED6tWA/mX9w==",
-      "type": "package",
-      "path": "system.servicemodel.primitives/8.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net462/System.ServiceModel.Duplex.dll",
-        "lib/net462/System.ServiceModel.Duplex.pdb",
-        "lib/net462/System.ServiceModel.Primitives.dll",
-        "lib/net462/System.ServiceModel.Primitives.pdb",
-        "lib/net462/System.ServiceModel.Security.dll",
-        "lib/net462/System.ServiceModel.Security.pdb",
-        "lib/net8.0/System.ServiceModel.Duplex.dll",
-        "lib/net8.0/System.ServiceModel.Duplex.pdb",
-        "lib/net8.0/System.ServiceModel.Primitives.dll",
-        "lib/net8.0/System.ServiceModel.Primitives.pdb",
-        "lib/net8.0/System.ServiceModel.Security.dll",
-        "lib/net8.0/System.ServiceModel.Security.pdb",
-        "lib/net8.0/System.ServiceModel.dll",
-        "lib/net8.0/System.ServiceModel.pdb",
-        "lib/net8.0/cs/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/de/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/es/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/fr/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/it/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/ja/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/ko/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/pl/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/pt-BR/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/ru/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/tr/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/zh-Hans/System.ServiceModel.Primitives.resources.dll",
-        "lib/net8.0/zh-Hant/System.ServiceModel.Primitives.resources.dll",
-        "lib/netstandard2.0/System.ServiceModel.Duplex.dll",
-        "lib/netstandard2.0/System.ServiceModel.Duplex.pdb",
-        "lib/netstandard2.0/System.ServiceModel.Primitives.dll",
-        "lib/netstandard2.0/System.ServiceModel.Primitives.pdb",
-        "lib/netstandard2.0/System.ServiceModel.Security.dll",
-        "lib/netstandard2.0/System.ServiceModel.Security.pdb",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/net462/System.ServiceModel.Primitives.dll",
-        "ref/net8.0/System.ServiceModel.Primitives.dll",
-        "ref/netcoreapp2.0/_._",
-        "ref/netstandard2.0/System.ServiceModel.Primitives.dll",
-        "system.servicemodel.primitives.8.1.0.nupkg.sha512",
-        "system.servicemodel.primitives.nuspec"
-      ]
-    },
-    "System.Windows.Extensions/8.0.0": {
-      "sha512": "Obg3a90MkOw9mYKxrardLpY2u0axDMrSmy4JCdq2cYbelM2cUwmUir5Bomvd1yxmPL9h5LVHU1tuKBZpUjfASg==",
-      "type": "package",
-      "path": "system.windows.extensions/8.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net6.0/System.Windows.Extensions.dll",
-        "lib/net6.0/System.Windows.Extensions.xml",
-        "lib/net7.0/System.Windows.Extensions.dll",
-        "lib/net7.0/System.Windows.Extensions.xml",
-        "lib/net8.0/System.Windows.Extensions.dll",
-        "lib/net8.0/System.Windows.Extensions.xml",
-        "runtimes/win/lib/net6.0/System.Windows.Extensions.dll",
-        "runtimes/win/lib/net6.0/System.Windows.Extensions.xml",
-        "runtimes/win/lib/net7.0/System.Windows.Extensions.dll",
-        "runtimes/win/lib/net7.0/System.Windows.Extensions.xml",
-        "runtimes/win/lib/net8.0/System.Windows.Extensions.dll",
-        "runtimes/win/lib/net8.0/System.Windows.Extensions.xml",
-        "system.windows.extensions.8.0.0.nupkg.sha512",
-        "system.windows.extensions.nuspec",
-        "useSharedDesignerContext.txt"
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "ZstdSharp.Port/0.8.6": {
@@ -2833,46 +1050,44 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0-windows7.0": [
+    ".NETFramework,Version=v4.8": [
+      "Microsoft.ReportViewer.Common >= 10.0.40219.1",
       "Microsoft.ReportViewer.WinForms >= 10.0.40219.1",
-      "Microsoft.ReportingServices.ReportViewerControl.WebForms >= 150.1652.0",
-      "Microsoft.ReportingServices.ReportViewerControl.WinForms >= 150.1652.0",
-      "MySql.Data >= 9.6.0",
-      "ReportViewerCore.NETCore >= 15.1.33"
+      "MySql.Data >= 9.7.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\etgberjame\\.nuget\\packages\\": {},
+    "C:\\Users\\emant\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj",
+      "projectUniqueName": "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj",
       "projectName": "StarBuko",
-      "projectPath": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj",
-      "packagesPath": "C:\\Users\\etgberjame\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\obj\\",
+      "projectPath": "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj",
+      "packagesPath": "C:\\Users\\emant\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\emant\\source\\repos\\StarBuko\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\etgberjame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\emant\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0-windows"
+        "net48"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net48": {
+          "framework": "net48",
+          "targetAlias": "net48",
           "projectReferences": {}
         }
       },
@@ -2886,106 +1101,33 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "10.0.100"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
-      "net8.0-windows7.0": {
-        "targetAlias": "net8.0-windows",
+      "net48": {
+        "framework": "net48",
+        "targetAlias": "net48",
         "dependencies": {
+          "Microsoft.ReportViewer.Common": {
+            "target": "Package",
+            "version": "[10.0.40219.1, )"
+          },
           "Microsoft.ReportViewer.WinForms": {
             "target": "Package",
             "version": "[10.0.40219.1, )"
           },
-          "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
-            "target": "Package",
-            "version": "[150.1652.0, )"
-          },
-          "Microsoft.ReportingServices.ReportViewerControl.WinForms": {
-            "target": "Package",
-            "version": "[150.1652.0, )"
-          },
           "MySql.Data": {
             "target": "Package",
-            "version": "[9.6.0, )"
-          },
-          "ReportViewerCore.NETCore": {
-            "target": "Package",
-            "version": "[15.1.33, )"
+            "version": "[9.7.0, )"
           }
         },
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48",
-          "net481"
-        ],
-        "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WindowsForms": {
-            "privateAssets": "none"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202\\RuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x86": {
+        "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Microsoft.ReportingServices.ReportViewerControl.Winforms 150.1652.0 depends on Microsoft.SqlServer.Types (>= 14.0.0) but Microsoft.SqlServer.Types 14.0.0 was not found. Microsoft.SqlServer.Types 14.0.314.76 was resolved instead.",
-      "libraryId": "Microsoft.SqlServer.Types",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.WebForms 150.1652.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.ReportingServices.ReportViewerControl.WebForms",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.ReportingServices.ReportViewerControl.Winforms 150.1652.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.ReportingServices.ReportViewerControl.Winforms",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.ReportViewer.WinForms 10.0.40219.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.ReportViewer.WinForms",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.SqlServer.Types 14.0.314.76' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.SqlServer.Types",
-      "targetGraphs": [
-        "net8.0-windows7.0"
-      ]
-    }
-  ]
+  }
 }
