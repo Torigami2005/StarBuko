@@ -1,37 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj": {}
+    "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj": {}
   },
   "projects": {
-    "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj": {
+    "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj",
+        "projectUniqueName": "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj",
         "projectName": "StarBuko",
-        "projectPath": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\StarBuko.csproj",
-        "packagesPath": "C:\\Users\\etgberjame\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\etgberjame\\source\\repos\\StarBuko\\obj\\",
+        "projectPath": "C:\\Users\\emant\\source\\repos\\StarBuko\\StarBuko.csproj",
+        "packagesPath": "C:\\Users\\emant\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emant\\source\\repos\\StarBuko\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\etgberjame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emant\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0-windows"
+          "net48"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-windows7.0": {
-            "targetAlias": "net8.0-windows",
+          "net48": {
+            "framework": "net48",
+            "targetAlias": "net48",
             "projectReferences": {}
           }
         },
@@ -45,53 +45,32 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
-        "net8.0-windows7.0": {
-          "targetAlias": "net8.0-windows",
+        "net48": {
+          "framework": "net48",
+          "targetAlias": "net48",
           "dependencies": {
+            "Microsoft.ReportViewer.Common": {
+              "target": "Package",
+              "version": "[10.0.40219.1, )"
+            },
             "Microsoft.ReportViewer.WinForms": {
               "target": "Package",
               "version": "[10.0.40219.1, )"
             },
-            "Microsoft.ReportingServices.ReportViewerControl.WebForms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
-            },
-            "Microsoft.ReportingServices.ReportViewerControl.WinForms": {
-              "target": "Package",
-              "version": "[150.1652.0, )"
-            },
             "MySql.Data": {
               "target": "Package",
-              "version": "[9.6.0, )"
-            },
-            "ReportViewerCore.NETCore": {
-              "target": "Package",
-              "version": "[15.1.33, )"
+              "version": "[9.7.0, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            },
-            "Microsoft.WindowsDesktop.App.WindowsForms": {
-              "privateAssets": "none"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win-x86": {
+          "#import": []
         }
       }
     }
